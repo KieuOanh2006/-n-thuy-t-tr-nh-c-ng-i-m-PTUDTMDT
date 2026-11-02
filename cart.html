@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng của bạn | Góc Desk</title>
+    <meta
+      name="description"
+      content="Giao diện giỏ hàng Góc Desk với sản phẩm, số lượng, mã ưu đãi và tóm tắt đơn hàng."
+    />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/site-shell.css" />
+    <script src="js/product-data.js" defer></script>
+    <script src="js/cart-store.js" defer></script>
+    <script src="js/cart-badge.js" defer></script>
+    <script src="js/home.js" defer></script>
+    <script src="js/catalog-utils.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <link rel="stylesheet" href="css/page-hero.css" />
+  </head>
+  <body class="gd-cart-page has-photo-header page-cart">
+    <a class="site-skip-link" href="#gd-main">Đến nội dung chính</a>
+    <header class="site-header site-shell-header home-site-header">
+        <div class="home-announcement" data-home-announcement aria-label="Thông điệp từ Góc Desk">
+            <span class="home-announcement-icon" aria-hidden="true">✦</span>
+            <p class="home-announcement-message" data-announcement-message aria-live="off">Một góc nhỏ, nhiều niềm vui · Miễn phí vận chuyển từ 499.000đ</p>
+        </div>
+      <div class="container">
+        <div class="header-top">
+          <a
+            href="index.html"
+            class="brand-logo"
+            aria-label="Góc Desk — Trang chủ"
+          >
+            <img
+              class="brand-art"
+              src="images/logo1.png"
+              width="1632"
+              height="964"
+              alt="Góc Desk — Góc nhỏ, cảm hứng lớn"
+            />
+          </a>
+
+          <form class="search-bar" role="search" action="products.html">
+            <input
+              type="search"
+              name="q"
+              placeholder="Tìm bàn phím, đèn bàn, giá đỡ..."
+              aria-label="Tìm kiếm sản phẩm"
+            />
+            <button type="submit" aria-label="Tìm kiếm">
+              <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="10.5" cy="10.5" r="6.5" />
+                <path d="m16 16 4.5 4.5" />
+              </svg>
+            </button>
+          </form>
+
+                <div class="header-icons">
+                    <a href="products.html" class="icon-btn" title="Yêu thích" aria-label="Yêu thích"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"/></svg></a>
+                    <a href="cart.html" class="icon-btn" aria-current="page" title="Giỏ hàng" aria-label="Giỏ hàng"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h3l3 12h11l3-9H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg></a>
+                    <a href="points.html" class="icon-btn" title="Tài khoản & Tích điểm" aria-label="Tài khoản"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2Z"/></svg></a>
+                </div>
+            </div>
+
+        <nav class="main-nav" aria-label="Menu điều hướng chính">
+          <ul class="nav-list">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="products.html">Sản phẩm</a></li>
+            <li><a href="points.html">Tích điểm</a></li>
+            <li><a href="warranty.html">Bảo hành</a></li>
+            <li><a href="news.html">Tin tức</a></li>
+            <li><a href="setup-3d.html">Thiết kế 3D</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="gd-main" class="gd-main">
+      <section class="subpage-hero" aria-labelledby="cart-page-title">
+        <img
+          class="subpage-hero-image"
+          src="images/hero-desk-fullscreen.png"
+          alt=""
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="subpage-hero-content">
+          <p class="subpage-eyebrow">Thêm một chút cảm hứng</p>
+          <h1 class="subpage-title" id="cart-page-title">Giỏ hàng của bạn</h1>
+          <p class="subpage-description">
+            Những món đồ nhỏ cho góc làm việc thật riêng. Kiểm tra màu sắc và số
+            lượng trước khi tiếp tục.
+          </p>
+        </div>
+      </section>
+      <div class="subpage-body">
+        <nav class="gd-breadcrumb" aria-label="Đường dẫn">
+          <a href="index.html">Trang chủ</a><span aria-hidden="true">/</span
+          ><span aria-current="page">Giỏ hàng</span>
+        </nav>
+        <div class="gd-page-heading">
+          <div class="gd-step" aria-label="Bước 1 trên 3">
+            <span class="gd-step-active">01 <b>Giỏ hàng</b></span
+            ><span class="gd-step-line"></span><span>02 <b>Giao hàng</b></span
+            ><span class="gd-step-line"></span><span>03 <b>Hoàn tất</b></span>
+          </div>
+        </div>
+        <div class="gd-cart-layout">
+          <section class="gd-products" aria-labelledby="gd-products-heading">
+            <div class="gd-section-title">
+              <h2 id="gd-products-heading">
+                Sản phẩm đã chọn <span id="gd-cart-line-count">0</span>
+              </h2>
+              <span class="gd-muted" id="gd-cart-quantity-count"
+                >0 sản phẩm</span
+              >
+            </div>
+            <div id="gd-table-head" class="gd-table-head" aria-hidden="true">
+              <span>SẢN PHẨM</span><span>ĐƠN GIÁ</span><span>SỐ LƯỢNG</span
+              ><span>THÀNH TIỀN</span>
+            </div>
+            <div id="gd-cart-items"></div>
+            <div id="gd-cart-empty" class="gd-cart-empty">
+              <h2>Giỏ hàng chưa có sản phẩm</h2>
+              <p>
+                Chọn sản phẩm và màu yêu thích để bắt đầu góc riêng của bạn.
+              </p>
+              <a href="products.html">Khám phá sản phẩm ↗</a>
+            </div>
+            <p
+              id="gd-cart-status"
+              class="gd-demo-note"
+              role="status"
+              aria-live="polite"
+            ></p>
+            <div class="gd-cart-bottom">
+              <a href="products.html" class="gd-continue"
+                ><svg
+                  class="gd-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 12H4m6-6-6 6 6 6" />
+                </svg>
+                Tiếp tục mua sắm</a
+              ><span class="gd-muted">Một góc nhỏ, nhiều cảm hứng.</span>
+            </div>
+            <section class="gd-coupon" aria-labelledby="gd-coupon-heading">
+              <div class="gd-coupon-intro">
+                <span class="gd-coupon-icon"
+                  ><svg
+                    class="gd-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M3 3h8l10 10-8 8L3 11V3Z" />
+                    <circle cx="7.5" cy="7.5" r="1" /></svg
+                ></span>
+                <div>
+                  <h2 id="gd-coupon-heading">Một chút ưu đãi cho bạn</h2>
+                  <p>Nhập mã ưu đãi trước khi đặt hàng.</p>
+                </div>
+              </div>
+            </section>
+            <p class="gd-demo-note" id="gd-demo-note">
+              Giỏ hàng được lưu trên trình duyệt này. Giá là giá tham khảo; đặt
+              hàng và áp mã ưu đãi chưa được mở.
+            </p>
+          </section>
+          <aside class="gd-summary" aria-labelledby="gd-summary-heading">
+            <div class="gd-summary-top">
+              <p class="gd-eyebrow">GÓC DESK</p>
+              <h2 id="gd-summary-heading">Tóm tắt đơn hàng</h2>
+              <p>Kiểm tra một lần, an tâm hơn một chút.</p>
+            </div>
+            <dl class="gd-totals">
+              <div>
+                <dt>
+                  Tạm tính <span id="gd-summary-count">(0 sản phẩm)</span>
+                </dt>
+                <dd id="gd-cart-subtotal">0 ₫</dd>
+              </div>
+              <div>
+                <dt>Ưu đãi</dt>
+                <dd>0₫</dd>
+              </div>
+              <div class="gd-shipping">
+                <dt>Phí vận chuyển</dt>
+                <dd>Tính ở bước giao hàng</dd>
+              </div>
+              <div class="gd-coupon-control">
+                <label class="gd-sr-only" for="gd-coupon-input">Mã ưu đãi</label
+                ><input
+                  id="gd-coupon-input"
+                  disabled
+                  type="text"
+                  placeholder="Nhập mã ưu đãi"
+                  maxlength="24"
+                  aria-describedby="gd-demo-note"
+                /><button type="button" disabled>Áp dụng</button>
+              </div>
+              <div class="gd-total">
+                <dt>Tổng tạm tính</dt>
+                <dd id="gd-cart-total">0 ₫</dd>
+              </div>
+            </dl>
+            <p class="gd-shipping-note">Chưa bao gồm phí vận chuyển.</p>
+            <button
+              class="gd-checkout"
+              type="button"
+              disabled
+              aria-describedby="gd-demo-note"
+            >
+              Tiến hành đặt hàng
+              <svg
+                class="gd-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M4 12h16m-6-6 6 6-6 6" />
+              </svg>
+            </button>
+            <p class="gd-checkout-note">
+              <svg
+                class="gd-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="5" y="10" width="14" height="11" rx="2" />
+                <path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2" />
+              </svg>
+              Chưa tạo đơn hàng thực tế
+            </p>
+            <div class="gd-summary-decoration">
+              <span>Góc làm việc đẹp hơn<br />bắt đầu từ những điều nhỏ.</span
+              ><svg
+                class="gd-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M20 3C5 1 1 13 8 18c7 5 13-2 12-15Z" />
+                <path d="M4 22 16 8" />
+              </svg>
+            </div>
+          </aside>
+        </div>
+        <section class="gd-service-strip" aria-label="Thông tin hỗ trợ">
+          <a href="warranty.html"
+            ><svg
+              class="gd-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z" />
+              <path d="m8 11 3 3 5-5" />
+            </svg>
+            <div>
+              <h2>Chính sách rõ ràng</h2>
+              <p>Xem thông tin bảo hành</p>
+            </div>
+            <span>↗</span></a
+          >
+          <div>
+            <svg
+              class="gd-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M2 5h12v12H2zM14 9h4l4 5v3h-8" />
+              <circle cx="6" cy="18" r="2" />
+              <circle cx="18" cy="18" r="2" />
+            </svg>
+            <div>
+              <h2>Thông tin giao hàng</h2>
+              <p>Phí được xác định ở bước sau</p>
+            </div>
+          </div>
+          <a href="products.html"
+            ><svg
+              class="gd-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 3C5 1 1 13 8 18c7 5 13-2 12-15Z" />
+              <path d="M4 22 16 8" />
+            </svg>
+            <div>
+              <h2>Chọn đúng góc của bạn</h2>
+              <p>Khám phá phụ kiện bàn làm việc</p>
+            </div>
+            <span>↗</span></a
+          >
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer site-shell-footer" id="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-newsletter">
+            <p class="footer-eyebrow">ĐĂNG KÝ NHẬN THÔNG BÁO</p>
+            <h2>Một chút cảm hứng<br />mỗi tuần.</h2>
+            <p>
+              Điền email của bạn để nhận thông báo về sản phẩm mới, ưu đãi và
+              những ý tưởng cho góc riêng.
+            </p>
+            <div class="newsletter-signup">
+              <label class="newsletter-label" for="newsletter-email"
+                >Email nhận thông báo</label
+              >
+              <div class="newsletter-input">
+                <input
+                  id="newsletter-email"
+                  type="email"
+                  name="email"
+                  placeholder="Nhập email của bạn"
+                  autocomplete="email"
+                  aria-describedby="newsletter-status"
+                />
+              </div>
+              <button
+                class="newsletter-submit"
+                type="button"
+                popovertarget="newsletter-info"
+              >
+                Đăng ký nhận tin
+                <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 12h15m-6-6 6 6-6 6" />
+                </svg>
+              </button>
+              <p class="newsletter-status" id="newsletter-status">
+                Bản tin sẽ sớm được mở đăng ký.
+              </p>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Góc Desk &amp; bạn</h3>
+            <ul>
+              <li><a href="index.html#community">Cộng đồng người dùng</a></li>
+              <li><a href="news.html">Cảm hứng góc làm việc</a></li>
+              <li><a href="news.html">Mẹo chọn phụ kiện</a></li>
+              <li><a href="setup-3d.html">Góc Desk Studio</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Khám phá sản phẩm</h3>
+            <ul>
+              <li>
+                <a href="index.html#shop-categories">Danh mục sản phẩm</a>
+              </li>
+              <li><a href="index.html#new-arrivals">Sản phẩm mới</a></li>
+              <li><a href="index.html#bestsellers">Sản phẩm bán chạy</a></li>
+              <li><a href="products.html">Tất cả sản phẩm</a></li>
+              <li><a href="points.html">Ưu đãi tích điểm</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Hỗ trợ khách hàng</h3>
+            <ul>
+              <li>
+                <a href="warranty.html#warranty-request">Liên hệ hỗ trợ</a>
+              </li>
+              <li><a href="index.html#faq-payment">Thông tin thanh toán</a></li>
+              <li><a href="index.html#faq-delivery">Thông tin giao hàng</a></li>
+              <li><a href="index.html#faq-returns">Hướng dẫn đổi trả</a></li>
+              <li><a href="warranty.html">Chính sách bảo hành</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Đồng hành cùng bạn</h3>
+            <ul>
+              <li><a href="setup-3d.html">Thiết kế góc 3D</a></li>
+              <li><a href="news.html">Tin tức &amp; bài viết</a></li>
+              <li><a href="index.html#faq">Câu hỏi thường gặp</a></li>
+              <li><a href="index.html#faq-bulk">Mua số lượng lớn</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-identity">
+          <div class="footer-about">
+            <a
+              class="footer-wordmark"
+              href="index.html"
+              aria-label="Góc Desk — trang chủ"
+              >góc desk<span aria-hidden="true">.</span></a
+            >
+            <p class="footer-tagline">Góc nhỏ, cảm hứng lớn.</p>
+            <p>
+              Phụ kiện và ý tưởng cho một góc học tập, làm việc mang dấu ấn của
+              bạn.
+            </p>
+          </div>
+          <a class="footer-connect" href="index.html#community">
+            <span class="footer-connect-icon"
+              ><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="9" cy="8" r="3" />
+                <path
+                  d="M3 21v-3a6 6 0 0 1 12 0v3m1-17a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 4v3"
+                /></svg
+            ></span>
+            <span
+              ><strong>Kết nối từ góc riêng</strong
+              ><span>Khám phá cộng đồng Góc Desk</span></span
+            >
+            <svg
+              class="ui-icon footer-connect-arrow"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M6 18 18 6M6 6h12v12" />
+            </svg>
+          </a>
+          <a class="footer-connect" href="warranty.html#warranty-request">
+            <span class="footer-connect-icon"
+              ><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 11a9 9 0 0 1-9 9H4l-3 2 2-6a9 9 0 1 1 18-5Z" />
+                <path d="M7 11h.01M12 11h.01M17 11h.01" /></svg
+            ></span>
+            <span
+              ><strong>Bạn cần thêm hỗ trợ?</strong
+              ><span>Trao đổi cùng Góc Desk</span></span
+            >
+            <svg
+              class="ui-icon footer-connect-arrow"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M6 18 18 6M6 6h12v12" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Góc Desk · Đồ án Phát triển ứng dụng TMĐT UEH.</p>
+          <div class="footer-bottom-links">
+            <span>Được chăm chút cho góc riêng của bạn.</span
+            ><a href="#gd-main"
+              >Về đầu trang <span aria-hidden="true">↑</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="newsletter-feedback" id="newsletter-info" popover>
+      <h3>Cảm ơn bạn đã quan tâm!</h3>
+      <p>
+        Đăng ký nhận bản tin sẽ sớm được mở. Email của bạn chưa được gửi hoặc
+        lưu lại.
+      </p>
+      <button
+        type="button"
+        popovertarget="newsletter-info"
+        popovertargetaction="hide"
+      >
+        Đã hiểu
+      </button>
+    </div>
+  </body>
+</html>
